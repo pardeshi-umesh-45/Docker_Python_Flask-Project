@@ -1,0 +1,47 @@
+""deploy process on ec2""
+yum install python3-pip
+pip install -r requirements.txt
+python3 app.py
+
+Note:
+nohup stands for "no hang up". It allows you to run a command that keeps running even after you log out or close your terminal session.
+
+Start your Flask application with nohup:
+
+## To run continuously  background without stop
+
+nohup python3 app.py > flask.log 2>&1 &
+
+
+#Survive logout (nohup),
+
+#Run in background (&),
+
+#Save logs (> flask.log 2>&1).
+
+#Every process has 3 "streams":
+
+
+#1 = stdout → standard output (normal messages, e.g., print())
+
+#2 = stderr → standard error (error messages, exceptions, tracebacks)
+
+
+ps aux | grep app.py   # to check running or not python background
+
+kill 9 <process id>  
+
+pkill -f app.py    # to kill process 
+
+
+you can verfiy after that by running 'ss -tuln' weather port is active or not fro paticular process 
+
+
+### How It Works
+nohup prevents the process from stopping when you log out.
+& runs it in the background.
+> flask.log 2>&1 redirects output (stdout & stderr) to flask.log.
+
+
+
+
