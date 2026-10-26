@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Simple Python Flask Dockerized Application#
 
 Build the image using the following command
@@ -35,3 +36,6 @@ ENTRYPOINT ["python"]
 
 # Run app.py when the container launches
 CMD ["app.py"]
+=======
+# Docker_Python_Flask-Project
+>>>>>>> 8bcc50a3edaa53662f5c2f383dcbdeb26e5781b2
